@@ -1,0 +1,26 @@
+{
+  "name": "foxycat",
+  "version": "1.0.0",
+  "description": "Tres hot content",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derzunov/foxycat.git"
+  },
+  "author": "derzunov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/derzunov/foxycat/issues"
+  },
+  "homepage": "https://github.com/derzunov/foxycat#readme",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
