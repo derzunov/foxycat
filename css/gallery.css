@@ -1,0 +1,216 @@
+/* viewer */
+.viewer_blocker {
+    overflow: hidden;
+}
+
+/* photoViewer.js */
+.viewer {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.85);
+    display: none;
+}
+.viewer__loader {
+    background: url(../img/ajax-loader.gif);
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -16px;
+    margin-left: -16px;
+    z-index: 2001;
+}
+
+.viewer__outer {
+    text-align: center;
+    height: 100%;
+
+    padding: 0 0 50px 0;
+    box-sizing: border-box;
+
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+}
+.viewer__outer .viewer__outer-wrapper {
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.viewer__outer .viewer__outer-wrapper:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.viewer__inner {
+    position: relative;
+    z-index: 2002;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 90%;
+    max-height: 90%;
+}
+.viewer__image {
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+    cursor: pointer;
+
+    margin: 0 auto;
+}
+.viewer__title {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.5em;
+    background: rgba(0,0,0,.7);
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+.viewer__close {
+    display: block;
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 32px;
+    height: 32px;
+
+    color: #fff;
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.viewer__forward,
+.viewer__backward {
+    display: block;
+    position: absolute;
+
+    top: 50%;
+    right: 10px;
+
+    width: 32px;
+    height: 32px;
+
+    color: #fff;
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.viewer__backward {
+    left: 10px;
+}
+
+.viewer__bottom {
+    height: 250px;
+    width: 100%;
+
+    position: fixed;
+    bottom: 0;
+
+    margin-bottom: -200px;
+
+    background-color: #0a0a0a;
+
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+}
+
+.viewer__bottom-toggler {
+    cursor: pointer;
+    color: #fff;
+    padding: 5px;
+
+    display: inline-block;
+}
+
+.viewer_bottom-open .viewer__outer {
+    padding: 0 0 250px 0;
+}
+
+.viewer_bottom-open .viewer__bottom {
+    margin-bottom: 0;
+}
+
+.viewer__bottom-content-wrapper {
+    margin: 0 40px;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.viewer__bottom-content {
+    height: 160px;
+    width: 99999px;
+    margin: 20px 0 0 0;
+
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+
+.viewer__bottom-image {
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+    background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    margin: 0 0 0 20px;
+
+    cursor: pointer;
+}
+
+a:first-child .viewer__bottom-image {
+    margin: 0;
+}
+
+.viewer__bottom-forward {
+    width: 16px;
+    height: 16px;
+
+    position: absolute;
+    right: 5px;
+    top: 50%;
+
+    color: #fff;
+    font-size: 16px;
+
+    cursor: pointer;
+    z-index: 777;
+}
+
+.viewer__bottom-backward {
+    width: 16px;
+    height: 16px;
+
+    position: absolute;
+    left: 5px;
+    top: 50%;
+
+    color: #fff;
+    font-size: 16px;
+
+    cursor: pointer;
+    z-index: 777;
+}
